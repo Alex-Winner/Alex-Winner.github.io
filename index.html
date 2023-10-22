@@ -83,10 +83,31 @@
             <div class="portfolio-header">
                 <h2 class="section__title">Portfolio</h2>
                 <span class="section__subtitle">this is my works</span>
+
+                <div id="myBtnContainer">
+                    <button class="portfolio-btn portfolio-active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="portfolio-btn" onclick="filterSelection('cars')">Computer Vision</button>
+                    <button class="portfolio-btn" onclick="filterSelection('animals')">Deep Learning</button>
+                    <button class="portfolio-btn" onclick="filterSelection('fruits')">Robotics</button>
+                    <button class="portfolio-btn" onclick="filterSelection('colors')">Digital Signal Processing</button>
+                </div>
+
             </div>
 
             <div class="portfolio-main">
-                
+                <div class="filterDiv cars">BMW</div>
+                <div class="filterDiv colors fruits">Orange</div>
+                <div class="filterDiv cars">Volvo</div>
+                <div class="filterDiv colors">Red</div>
+                <div class="filterDiv cars">Ford</div>
+                <div class="filterDiv colors">Blue</div>
+                <div class="filterDiv animals">Cat</div>
+                <div class="filterDiv animals">Dog</div>
+                <div class="filterDiv fruits">Melon</div>
+                <div class="filterDiv fruits animals">Kiwi</div>
+                <div class="filterDiv fruits">Banana</div>
+                <div class="filterDiv fruits">Lemon</div>
+                <div class="filterDiv animals">Cow</div>
             </div>
 
         </div>
@@ -804,15 +825,7 @@
     <!-- Custom JS link -->
 
     <!-- import -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!--script src="js/bootstrap.min.js"></script-->
-    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

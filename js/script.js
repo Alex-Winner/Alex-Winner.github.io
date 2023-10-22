@@ -30,6 +30,51 @@ function scrollActive() {
 window.addEventListener('scroll', scrollActive)
 
 
+// portfolio
+filterSelection("all")
+
+function filterSelection(c) {
+    const x = document.getElementsByClassName("filterDiv");
+    if (c == "all") c = "";
+    for (let i = 0; i < x.length; i++) {
+        removeClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
+    }
+}
+
+function addClass(element, name) {
+    let arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (let i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+    }
+}
+
+function removeClass(element, name) {
+    let arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (let i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+    }
+    element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+const btnContainer = document.getElementById("myBtnContainer");
+const btns = btnContainer.querySelectorAll('.portfolio-btn');
+btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const currentBtn = document.querySelector(".portfolio-active");
+        currentBtn.classList.remove('portfolio-active');
+        btn.classList.add('portfolio-active');
+    })
+});
+
+
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
     tabContents = document.querySelectorAll('[data-content]')
@@ -86,6 +131,7 @@ function closeMenu(menus, arrows) {
 };
 
 
+// Scroll button
 function scrollTop() {
     let scrollTop = document.getElementById('scroll-top');
     // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
