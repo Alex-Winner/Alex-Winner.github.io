@@ -23,8 +23,9 @@
     --active-btn-color: #618A2C;
     --portfolio-txt-color: white;
     --portfolio-bg-color: #ec4f1f;
-    --scrollup-icon-color: white; 
+    --scrollup-icon-color: white;
     --scrollup-icon-bg: #618A2C;
+    --icon-size: 5rem;
 }
 
 body {
@@ -91,7 +92,6 @@ span {
 
 .navlist {
     display: flex;
-
 }
 
 .navlist a {
@@ -134,6 +134,8 @@ span {
     justify-content: flex-start;
 }
 
+
+
 .slide {
     margin-bottom: 20px;
 }
@@ -155,6 +157,10 @@ span {
     color: var(--second-color);
     font-size: 20px;
     font-weight: 500;
+}
+
+.home-text {
+    border: 1px solid red;
 }
 
 .home-text h1 {
@@ -358,14 +364,143 @@ header.sticky {
 }
 
 .filterDiv {
+    width: 180px;
+    height: 180px;
+    overflow: hidden;
     background-color: var(--portfolio-bg-color);
     color: var(--portfolio-txt-color);
-    width: 180px;
-    line-height: 180px;
+    /*line-height: 180px;*/
     text-align: center;
-    margin: 2px;
+    margin: 5px;
     display: none;
+    cursor: pointer;
+    border-radius: 10px;
+
+    position: relative;
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    
+    /* Add a smooth transition effect */
+}
+
+.filterDiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.filterDiv:hover .overlay {
+    opacity: 1;
+    height: 100%;
+    transition: ease-in-out 0.5s;
+    /* Show the overlay on hover */
+}
+
+.overlay p {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.filterDiv:hover {
+    scale: 1.1;
+    transition: ease-in-out 0.5s;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 200px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black w/ opacity */
+}
+
+.modal-title {
+    text-align: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.modal-content p {
+    color: var(--text-color);
+}
+
+.modal-content img {
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    font-size: var(--icon-size);
+}
+
+.project-links a {
+    color: #ec4f1f;
+}
+
+.project-links a:hover{
+    transform: scale(1.1);
+}
+
 
 #myBtnContainer {
     display: flex;
@@ -472,60 +607,6 @@ section#contact {
     background-repeat: no-repeat;
     background-position: center;
 }
-
-/*
-section#contact .section-heading {
-    color: #fff;
-}
-
-section#contact .form-group {
-    margin-bottom: 25px;
-}
-
-section#contact .form-group input,
-section#contact .form-group textarea {
-    padding: 20px;
-}
-
-section#contact .form-group input.form-control {
-    height: auto;
-}
-
-section#contact .form-group textarea.form-control {
-    height: 248px;
-}
-
-section#contact .form-control:focus {
-    border-color: #fcbc1d;
-    box-shadow: none;
-}
-
-section#contact ::-webkit-input-placeholder {
-    font-weight: 700;
-    color: #ced4da;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-section#contact :-moz-placeholder {
-    font-weight: 700;
-    color: #ced4da;
-    
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-section#contact ::-moz-placeholder {
-    font-weight: 700;
-    color: #ced4da;
-    
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-section#contact :-ms-input-placeholder {
-    font-weight: 700;
-    color: #ced4da;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-*/
 
 /*END CONTACT*/
 
@@ -636,37 +717,3 @@ section#contact :-ms-input-placeholder {
 }
 
 
-
-
-
-
-/*
-font-family: 'Barlow Semi Condensed', sans-serif;
-font-family: 'Gloria Hallelujah', cursive;
-font-family: 'Karla', sans-serif;
-font-family: 'Roboto', sans-serif;
-*/
-
-/* Color Theme Swatches in Hex 
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-1-hex { color: #ED3700; }
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-2-hex { color: #0D0D0D; }
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-3-hex { color: #F7F7F7; }
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-4-hex { color: #618A2C; }
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-5-hex { color: #C7B285; }
-*/
-
-/* Color Theme Swatches in RGBA 
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-1-rgba { color: rgba(237, 55, 0, 1); }
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-2-rgba { color: rgba(13, 13, 13, 1); }
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-3-rgba { color: rgba(247, 247, 247, 1); }
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-4-rgba { color: rgba(97, 138, 44, 1); }
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-5-rgba { color: rgba(199, 178, 133, 1); }
-*/
-
-/* Color Theme Swatches in HSLA 
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-1-hsla { color: hsla(13, 100, 46, 1); }
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-2-hsla { color: hsla(0, 0, 5, 1); }
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-3-hsla { color: hsla(0, 0, 96, 1); }
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-4-hsla { color: hsla(86, 51, 35, 1); }
-.Copy-of-Copy-of-Red-Pepper-Pizza-Modern-5-hsla { color: hsla(40, 37, 65, 1); }
-*/

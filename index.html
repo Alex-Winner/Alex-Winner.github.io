@@ -17,11 +17,6 @@
 
     <title>Alyx Winner</title>
 
-    <!-- BOOTSTRAP   -->
-    <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"-->
-    <!--link href="css/bootstrap.min.css" rel="stylesheet"-->
-    <!--link rel="stylesheet" type="text/css" href="css/animate.css"-->
-
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -86,7 +81,7 @@
 
                 <div id="myBtnContainer">
                     <button class="portfolio-btn portfolio-active" onclick="filterSelection('all')"> Show all</button>
-                    <button class="portfolio-btn" onclick="filterSelection('cars')">Computer Vision</button>
+                    <button class="portfolio-btn" onclick="filterSelection('project-computerVision')">Computer Vision</button>
                     <button class="portfolio-btn" onclick="filterSelection('animals')">Deep Learning</button>
                     <button class="portfolio-btn" onclick="filterSelection('fruits')">Robotics</button>
                     <button class="portfolio-btn" onclick="filterSelection('colors')">Digital Signal Processing</button>
@@ -95,7 +90,21 @@
             </div>
 
             <div class="portfolio-main">
-                <div class="filterDiv cars">BMW</div>
+
+                <div class="filterDiv project-computerVision" id="projectBtn">
+                    <img src="img/portfolio/logo/AcouBot.jpg" alt="" />
+                    <div class="overlay">
+                        <h3 class="project-title">Acoubot</h3>
+                    </div>
+                </div>
+
+                <div class="filterDiv project-computerVision" id="projectBtn">
+                    <img src="img/portfolio/logo/AcouBot.jpg" alt="" />
+                    <div class="overlay">
+                        <h3 class="project-title">Acoubot</h3>
+                    </div>
+                </div>
+
                 <div class="filterDiv colors fruits">Orange</div>
                 <div class="filterDiv cars">Volvo</div>
                 <div class="filterDiv colors">Red</div>
@@ -112,7 +121,6 @@
 
         </div>
     </section>
-
 
 
     <!-- ======== EXPERIENCE SECTION ======== -->
@@ -810,6 +818,24 @@
             </div>
         </div>
     </section>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <h2 class="modal-title">Acoubot</h2>
+            <span class="close">&times;</span>
+            <p class="p-model">Acoubot helps professors to improve the acoustics of the classroom. 
+                With just a few clicks, the system will measure the classroom and display a simple solution for campus maintenance. 
+                That way it reduces the need to hire a professional.</p>
+            
+            <img src="img/portfolio/logo/AcouBot.jpg" alt="">
+            <div class="project-links">
+                <a href=""><i class='bx bxl-youtube'></i></a>
+                <a href=""><i class='bx bxl-github' ></i></a>
+            </div>
+        </div>
+    </div>
 
 
     <a href="#" class="scrollup" id="scroll-top">
