@@ -14,7 +14,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Gloria+Hallelujah&family=Karla:wght@400;700&family=Roboto:wght@300;400;700;900&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/fa5a92aa23.js" crossorigin="anonymous"></script>
     <title>Alyx Winner</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -32,6 +33,7 @@
             <li><a href="#portfolio">Porfolio</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
 
         </ul>
@@ -42,33 +44,79 @@
 
     <!-- ======== HOME SECTION ======== -->
     <section class="home" id="home">
-        <div class="home-text">
-            <div class="slide">
-                <span class="one">Hello</span>
-                <span class="two">I'm</span>
-            </div>
-            <h1>Alex</h1>
-            <h3>Computer Vision <span>Developer.</span></h3>
-            <p>Computer vision developer with Experience in SW and HW.</p>
-            <div class="button">
-                <a href="#" class="btn">Say Hello</a>
-                <a href="#" class="btn2"><span><i class='bx bx-play'></i></span>Watch my work</a>
+        <div class="container">
+            <div class="container-home">
+                <div class="container-upper">
+                    <div class="container-left">
+                        <div class="home-content">
+                            <div class="text">
+                                <h2>Hi there!</h2>
+                                <h1>I Am a
+                                    <span class="typing-text">Comuper Vision Developer</span>
+                                    <span class="typed-cursor" aria-hidden="true">|</span>
+                                </h1>
+                                <p>Computer vision developer with Experience in SW and HW.</p>
+                                <a href="#about" class="btn"><i class="fas fa-user"></i> about me</a>
+
+                            </div>
+                        </div>
+                        <div class="contact-icons">
+                            <a href="mailto:volodalex90@gmail.com"><i class='bx bxl-gmail'></i></a>
+                            <a href="https://github.com/Alex-Winner" target="_blank"><i class='bx bxl-github'></i></a>
+                            <a href="https://www.linkedin.com/in/alex-volodarsky/" target="_blank"><i
+                                    class='bx bxl-linkedin'></i></a>
+                            <a href="https://www.facebook.com/sasha.s.winner" target="_blank"><i
+                                    class='bx bxl-facebook'></i></a>
+                            <a href="https://twitter.com/AlyxWinner" target="_blank"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+                    <div class="container-right">
+                        <img src="img/1.png" alt="">
+                    </div>
+                </div>
+                <div class="container-home-bottom">
+                    <div class="container-left">
+                    </div>
+                    <div class="container-right"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ======== ABOUT SECTION ======== -->
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="img/about.jpg" alt="">
-        </div>
-        <div class="about-text">
-            <h2>About <span>Me</span></h2>
-            <h4>Computer vision Developer</h4>
-            <p>I am a EE engineer...bla bla bla</p>
-            <a href="#" class="btn">More about</a>
-        </div>
+        <div class="container">
+            <div class="container-home">
+                <div class="container-upper">
+                    <div class="container-left">
+                        <img src="img/about.jpg" alt="">
+                    </div>
+                    <div class="container-right">
+                        <h2>My name is Alex</h2>
+                        <p>Hello! I'm an Electronics Engineer with a focus on Robotics,
+                            VLSI, and a passion for Computer Vision and AI. With 13 years
+                            in technical roles and an ongoing MSc degree, I bring extensive
+                            experience alongside a strong foundation in mathematics and programming,
+                            primarily in Python.</p>
+                        <p>My leadership skills are honed over a decade,
+                            and my ability to provide innovative solutions crosses various
+                            engineering domains. Currently, I'm leveraging my background to specialize
+                            in Computer Vision, aiming to master this rapidly evolving field. Let's
+                            connect and explore how my skills can contribute to your project's success!</p>
+                        <div class="center-text">
+                            <a href="Alex_CV.pdf" class="btn" download><i class='bx bxs-download'></i> Download CV</a>
+                            <a href="#contact" class="btn"><i class='bx bxs-contact'></i> Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-about-bottom">
+                    <div class="container-left">
 
+                    </div>
+                    <div class="container-right"></div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
@@ -81,43 +129,46 @@
 
                 <div id="myBtnContainer">
                     <button class="portfolio-btn portfolio-active" onclick="filterSelection('all')"> Show all</button>
-                    <button class="portfolio-btn" onclick="filterSelection('project-computerVision')">Computer
+                    <button class="portfolio-btn" onclick="filterSelection('project-cv')">Computer
                         Vision</button>
-                    <button class="portfolio-btn" onclick="filterSelection('animals')">Deep Learning</button>
+                    <button class="portfolio-btn" onclick="filterSelection('project-dl')">Deep Learning</button>
                     <button class="portfolio-btn" onclick="filterSelection('project-robotics')">Robotics</button>
-                    <button class="portfolio-btn" onclick="filterSelection('colors')">Digital Signal Processing</button>
+                    <button class="portfolio-btn" onclick="filterSelection('project-dsp')">Digital Signal
+                        Processing</button>
                 </div>
 
             </div>
 
             <div class="portfolio-main">
 
-                <div class="filterDiv project-computerVision project-robotics" id="acoubotModal-btn">
+                <div class="filterDiv project-cv project-robotics project-dsp" id="acoubotModal-btn">
                     <img src="img/portfolio/logo/AcouBot.jpg" alt="" />
                     <div class="overlay">
                         <h3 class="project-title">Acoubot</h3>
                     </div>
                 </div>
 
-                <div class="filterDiv project-computerVision" id="stereoMocapModal-btn">
+                <div class="filterDiv project-cv" id="stereoMocapModal-btn">
                     <img src="img/portfolio/logo/stereoMocap.png" alt="" />
                     <div class="overlay">
                         <h3 class="project-title">Stereo Mocap</h3>
                     </div>
                 </div>
 
-                <div class="filterDiv colors fruits">Orange</div>
-                <div class="filterDiv cars">Volvo</div>
-                <div class="filterDiv colors">Red</div>
-                <div class="filterDiv cars">Ford</div>
-                <div class="filterDiv colors">Blue</div>
-                <div class="filterDiv animals">Cat</div>
-                <div class="filterDiv animals">Dog</div>
-                <div class="filterDiv fruits">Melon</div>
-                <div class="filterDiv fruits animals">Kiwi</div>
-                <div class="filterDiv fruits">Banana</div>
-                <div class="filterDiv fruits">Lemon</div>
-                <div class="filterDiv animals">Cow</div>
+                <div class="filterDiv project-robotics" id="obstacleAvoidanceModal-btn">
+                    <img src="img/portfolio/logo/obstacle_avoidance.png" alt="">
+                    <div class="overlay">
+                        <h3 class="project-title">Obstacle Avoidance</h3>
+                    </div>
+                </div>
+
+                <div class="filterDiv project-dl" id="tweetClassificationModal-btn">
+                    <img src="img/portfolio/logo/tweet_classification.png" alt="">
+                    <div class="overlay">
+                        <h3 class="project-title">Tweet Binary Classification</h3>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -126,10 +177,10 @@
 
     <!-- ======== EXPERIENCE SECTION ======== -->
     <section class="qualification section" id="experience">
-        <h2 class="section__title">Experience</h2>
-        <span class="section__subtitle">My journey in the academic & professional front</span>
-
         <div class="container">
+            <h2 class="section__title">Experience</h2>
+            <div class="section__subtitle">My journey in the academic & professional front</div>
+
             <div class="qualification__tabs">
                 <div class="qualification__button button--flex" data-target="#education">
                     <i class="bx bxs-graduation qualification__icon"></i>
@@ -171,7 +222,7 @@
                         <div>
                             <h3 class="qualification__title">B.Sc - Electrical & Electronic Engineering</h3>
                             <span class="qualification__subtitle">Shenkar College, Israel</span>
-                            <span class="qualification__subtitle">GPA 94/100</span>
+                            <span class="qualification__subtitle"><i class='bx bxs-medal'></i> GPA 94/100</span>
                             <span class="qualification__subtitle">Concentrations: Robotics & VLSI</span>
                             <div class="qualification__calendar">
                                 <i class='bx bxs-calendar'></i>
@@ -285,17 +336,39 @@
                     </div>
                 </div>
             </div>
+
+            <div class="courses">
+                <h3 class="courses-title">
+                    <i class='bx bx-book-open'></i>
+                    Courses and Certifications
+                </h3>
+                <div class="courses-list">
+                    <ul>
+                        <li><i class='bx  bx-right-arrow'></i>TensorFlow Developer (Udemy)</li>
+                        <li><i class='bx  bx-right-arrow'></i>ROS2 for Beginners (Udemy)</li>
+                        <li><i class='bx  bx-right-arrow'></i>The Git & Github Bootcamp (Udemy)</li>
+                        <li><i class='bx  bx-right-arrow'></i>EMP - Electronic Music Production (BPM Collage)</li>
+                        <li><img src="https://www.codewars.com/users/Alex-Winner/badges/small" alt=""></li>
+
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
 
     <!-- ======== SKILLS SECTION ======== -->
     <section class="skills" id="skills">
-        <div class="skills-container">
-            <h2 class="section-title">Skills</h2>
-            <h3 class="section-subtitle">My technical &amp; miscellaneous skills</h3>
+        <div class="container">
 
-            <div class="skills__container skills-container grid">
+            <div class="section__title">
+                Skills
+            </div>
+            <div class="section__subtitle">
+                My technical &amp; miscellaneous skills
+            </div>
+
+            <div class="skills__container grid">
 
                 <div>
                     <div class="skills__content skills__close">
@@ -312,60 +385,37 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h4 class="skills__name">Computer Vision</h4>
-                                    <span class="skills__number">92%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__cv"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h4 class="skills__name">Natural Language Processing</h4>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__nlp"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h4 class="skills__name">Signal Processing</h4>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__ap"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h4 class="skills__name">Probability &amp; Statistics</h4>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__ps"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
+
                                     <h4 class="skills__name">Data Analytics &amp; Visualization</h4>
-                                    <span class="skills__number">80%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__dav"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h4 class="skills__name">Frameworks &amp; Libraries </h4>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__frameworks"></span>
                                 </div>
                             </div>
 
@@ -387,41 +437,37 @@
 
                             <div class="skills__data">
                                 <div class="skills__titles">
+                                    <i class='bx bxl-python'></i>
                                     <h3 class="skills__name">Python</h3>
-                                    <span class="skills__number">95%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__python"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
+                                    <i class='bx bxl-c-plus-plus'></i>
                                     <h3 class="skills__name">C &amp; C++</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__cpp"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
-                                    <h3 class="skills__name">Java</h3>
-                                    <span class="skills__number">90%</span>
+                                    <i class='bx bx-chip'></i>
+                                    <h3 class="skills__name">Assembly</h3>
                                 </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__java"></span>
+                            </div>
+
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <i class='bx bxl-javascript'></i>
+                                    <h3 class="skills__name">JavaScript</h3>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
+                                    <i class='bx bxs-data'></i>
                                     <h3 class="skills__name">SQL</h3>
-                                    <span class="skills__number">95%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__sql"></span>
                                 </div>
                             </div>
 
@@ -430,8 +476,7 @@
 
                     <div class="skills__content skills__close">
                         <div class="skills__header">
-                            <i class="uil uil-cloud-computing skills__icon"></i>
-
+                            <i class='bx bx-devices skills__icon'></i>
                             <div>
                                 <h1 class="skills__title">Computing</h1>
                                 <span class="skills__subtitle">2+ Years XP</span>
@@ -444,61 +489,28 @@
 
                             <div class="skills__data">
                                 <div class="skills__titles">
-                                    <h3 class="skills__name">Google Cloud Platform</h3>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__gcp"></span>
+                                    <i class="fa fa-linux"></i>
+                                    <h3 class="skills__name">Linux</h3>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
-                                    <h3 class="skills__name">Microsoft Azure</h3>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__aws"></span>
+                                    <i class='fab fa-raspberry-pi'></i>
+                                    <h3 class="skills__name">Raspberry PI</h3>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
-                                    <h3 class="skills__name">Amazon Web Services</h3>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__aws"></span>
+                                    <i class='fab fa-raspberry-pi'></i>
+                                    <h3 class="skills__name">Nvidia Jetson</h3>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
-                                    <h3 class="skills__name">GPU &amp; Distributed Computing</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__gpu"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Virtualization</h3>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__gcp"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Security &amp; Penetration Testing</h3>
-                                    <span class="skills__number">75%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__pt"></span>
+                                    <h3 class="skills__name">Arduino</h3>
                                 </div>
                             </div>
 
@@ -522,53 +534,20 @@
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">HTML</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__html"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">CSS</h3>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__css"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">JavaScript</h3>
-                                    <span class="skills__number">75%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__js"></span>
                                 </div>
                             </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">React JS</h3>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__react"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">React Native</h3>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__react"></span>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 
@@ -577,7 +556,7 @@
                             <i class="uil uil-server-network skills__icon"></i>
 
                             <div>
-                                <h1 class="skills__title">BackEnd</h1>
+                                <h1 class="skills__title">Hardware</h1>
                                 <span class="skills__subtitle">1+ Years XP</span>
                             </div>
 
@@ -587,44 +566,16 @@
                         <div class="skills__list grid">
                             <div class="skills__data">
                                 <div class="skills__titles">
-                                    <h3 class="skills__name">Python - Flask, Fast API</h3>
-                                    <span class="skills__number">95%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__pythons"></span>
+                                    <h3 class="skills__name">Oscilloscope</h3>
+
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
-                                    <h3 class="skills__name">Java - Spring Framework</h3>
-                                    <span class="skills__number">80%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__javas"></span>
+                                    <h3 class="skills__name"> Spectrum analyzer</h3>
                                 </div>
                             </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Node JS, Express JS</h3>
-                                    <span class="skills__number">80%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__node"></span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Firebase</h3>
-                                    <span class="skills__number">60%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__firebase"></span>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
 
@@ -643,77 +594,60 @@
                         <div class="skills__list grid">
                             <div class="skills__data">
                                 <div class="skills__titles">
+                                    <i class='bx bxl-git'></i>
                                     <h3 class="skills__name">Git</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__git"></span>
                                 </div>
                             </div>
 
-                            <div class="skills__data">
-                                <div class="skills__titles">
-                                    <h3 class="skills__name">Linux</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__linux"></span>
-                                </div>
-                            </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">DevOps</h3>
-                                    <span class="skills__number">75%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__js"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">Software Development</h3>
-                                    <span class="skills__number">85%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__sd"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">Leadership</h3>
-                                    <span class="skills__number">95%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__lead"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">Communication</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__com"></span>
                                 </div>
                             </div>
 
                             <div class="skills__data">
                                 <div class="skills__titles">
                                     <h3 class="skills__name">Time Management</h3>
-                                    <span class="skills__number">98%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percentage skills__tm"></span>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="blog-header">
+                <div class="section__title">
+                    Blog
+                </div>
+                <div class="section__subtitle">
+                    this is my blog
+                </div>
+            </div>
+            <div class="blog-content">
+
             </div>
         </div>
     </section>
@@ -741,37 +675,27 @@
                     <div class="email details">
                         <i class='bx bxs-envelope'></i>
                         <div class="topic">Email</div>
-                        <div class="text-one"><a class="lead"
+
+                        <div class="text-one"><a
                                 href="mailto:volodalex90@gmail.com">volodalex90@gmail.com</a></div>
                     </div>
-                    <div class="github details">
-                        <i class='bx bxl-github'></i>
-                        <div class="topic">Github</div>
-                        <div class="text-one"><a class="lead"
-                                href="https://github.com/Alex-Winner">github.com/Alex-Winner</a></div>
-                    </div>
-                    <div class="youtube details">
-                        <i class='bx bxl-linkedin'></i>
-                        <div class="topic">LinkedIn</div>
-                        <div class="text-one"><a class="lead"
-                                href="https://www.linkedin.com/in/alex-volodarsky/">Linkein.com</a></div>
-                    </div>
-                    <div class="youtube details">
-                        <i class='bx bxl-youtube'></i>
-                        <div class="topic">Youtube</div>
-                        <div class="text-one"><a class="lead"
-                                href="https://www.youtube.com/@alexvolodarsky730">youtube.com</a></div>
-                    </div>
-
-
-
                 </div>
 
                 <div class="right-side">
-                    <div class="topic-text">Send us a message</div>
-                    <p>If you have any work from me or any types of quries related to my tutorial, you can send me
-                        message
-                        from here. It's my pleasure to help you.</p>
+                    <div class="contact-icons">
+                        <a href="mailto:volodalex90@gmail.com"><i class='bx bxl-gmail'></i></a>
+                        <a href="https://github.com/Alex-Winner" target="_blank"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/in/alex-volodarsky/" target="_blank"><i
+                                class='bx bxl-linkedin'></i></a>
+                        <a href="https://www.facebook.com/sasha.s.winner" target="_blank"><i
+                                class='bx bxl-facebook'></i></a>
+                        <a href="https://twitter.com/AlyxWinner" target="_blank"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                    <div class="topic-text">Send me a message to 
+                        <a href="">volodalex90@gmail.com</a></div>
+                    <p>If you have any projects or inquiries related to my expertise, 
+                        feel free to send me a message here. 
+                        I'm here to assist you and eager to collaborate</p>
                     <form action="https://formspree.io/f/xbjvwgwv" method="POST">
                         <label>
                             <div class="input-box">
@@ -839,19 +763,43 @@
         </div>
     </div>
 
+    <!-- Obstacle Avoidance Modal -->
+    <div class="modal" id="obstacleAvoidanceModal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <h2 class="modal-title">Obstacle Avoidance Simulation</h2>
+            <span class="close">&times;</span>
+            <p class="p-model">Obstacle avoidance simulation using LiDAR and MATLAB involves creating a
+                virtual environment to test LiDAR sensor performance in detecting and avoiding obstacles.
+                MATLAB's powerful tools allow for realistic simulations and algorithm development,
+                ensuring safer autonomous navigation in various applications, from robotics to
+                autonomous vehicles.</p>
+
+            <img src="img/portfolio/logo/obstacle_avoidance.png" alt="">
+            <div class="project-links">
+                <a href=""><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tweet Binary Classifacation Modal -->
+    <div class="modal" id="tweetClassificationModal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <h2 class="modal-title">Tweet Binary Classifacation</h2>
+            <span class="close">&times;</span>
+            <p class="p-model">Tweet Binary Classifacation</p>
+
+            <img src="img/portfolio/logo/tweet_classification.png" alt="">
+            <div class="project-links">
+                <a href=""><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </div>
 
     <a href="#" class="scrollup" id="scroll-top">
         <i class='bx bx-arrow-to-top scrollup__icon'></i>
     </a>
-
-    <footer>
-
-    </footer>
-
-
-
-    <!-- Custom JS link -->
-
     <!-- import -->
     <script type="text/javascript" src="js/script.js"></script>
 </body>
