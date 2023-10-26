@@ -696,7 +696,7 @@
                     <p>If you have any projects or inquiries related to my expertise, 
                         feel free to send me a message here. 
                         I'm here to assist you and eager to collaborate</p>
-                    <form action="https://formspree.io/f/xbjvwgwv" method="POST">
+                    <form name="contact-form" target="_blank" action="https://formspree.io/f/xbjvwgwv" method="POST">
                         <label>
                             <div class="input-box">
                                 <input type="text" placeholder="Enter your name" />
@@ -713,7 +713,7 @@
                             </div>
                         </label>
                         <div class="button">
-                            <input type="submit" value="Send Now" />
+                            <input type="submit" value="Send Now" onclick="submitForm()"/>
                         </div>
                     </form>
                 </div>
