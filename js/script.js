@@ -65,12 +65,12 @@ function removeClass(element, name) {
 
 // Add active class to the current button (highlight it)
 const btnContainer = document.getElementById("myBtnContainer");
-const btns = btnContainer.querySelectorAll('.portfolio-btn');
+const btns = btnContainer.querySelectorAll('.btn');
 btns.forEach(btn => {
     btn.addEventListener('click', () => {
-        const currentBtn = document.querySelector(".portfolio-active");
-        currentBtn.classList.remove('portfolio-active');
-        btn.classList.add('portfolio-active');
+        const currentBtn = document.querySelector(".btn-active");
+        currentBtn.classList.remove('btn-active');
+        btn.classList.add('btn-active');
     })
 });
 
@@ -114,9 +114,9 @@ tabs.forEach(tab => {
         target.classList.add('qualification__active')
 
         tabs.forEach(tab => {
-            tab.classList.remove('qualification__active')
+            tab.classList.remove('btn-active')
         })
-        tab.classList.add('qualification__active')
+        tab.classList.add('btn-active')
     })
 })
 

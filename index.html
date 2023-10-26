@@ -15,6 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Gloria+Hallelujah&family=Karla:wght@400;700&family=Roboto:wght@300;400;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="https://kit.fontawesome.com/fa5a92aa23.js" crossorigin="anonymous"></script>
     <title>Alyx Winner</title>
 
@@ -25,21 +27,22 @@
 
     <!-- ======== HEADER ======== -->
     <header>
-        <a href="#" class="logo">Alex <span>W</span>inner</a>
+        <div class="container">
+            <a href="#" class="logo"><span>A</span>lex <span>W</span>inner</a>
 
-        <ul class="navlist">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Porfolio</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <ul class="navlist">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Porfolio</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
 
-        </ul>
+            </ul>
 
-        <div class="bx bx-menu" id="menu-icon"></div>
-
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
     </header>
 
     <!-- ======== HOME SECTION ======== -->
@@ -71,7 +74,7 @@
                         </div>
                     </div>
                     <div class="container-right">
-                        <img src="img/1.png" alt="">
+                        <img src="" alt="">
                     </div>
                 </div>
                 <div class="container-home-bottom">
@@ -85,6 +88,7 @@
 
     <!-- ======== ABOUT SECTION ======== -->
     <section class="about" id="about">
+        <h2 class="section__title">About</h2>
         <div class="container">
             <div class="container-home">
                 <div class="container-upper">
@@ -128,13 +132,12 @@
                 <span class="section__subtitle">this is my works</span>
 
                 <div id="myBtnContainer">
-                    <button class="portfolio-btn portfolio-active" onclick="filterSelection('all')"> Show all</button>
-                    <button class="portfolio-btn" onclick="filterSelection('project-cv')">Computer
-                        Vision</button>
-                    <button class="portfolio-btn" onclick="filterSelection('project-dl')">Deep Learning</button>
-                    <button class="portfolio-btn" onclick="filterSelection('project-robotics')">Robotics</button>
-                    <button class="portfolio-btn" onclick="filterSelection('project-dsp')">Digital Signal
-                        Processing</button>
+                    <a class="btn btn-active" onclick="filterSelection('all')"> Show all</a>
+                    <a class="btn" onclick="filterSelection('project-cv')">Computer
+                        Vision</a>
+                    <a class="btn" onclick="filterSelection('project-dl')">Deep Learning</a>
+                    <a class="btn" onclick="filterSelection('project-robotics')">Robotics</a>
+                    <a class="btn" onclick="filterSelection('project-dsp')">DSP</a>
                 </div>
 
             </div>
@@ -182,14 +185,13 @@
             <div class="section__subtitle">My journey in the academic & professional front</div>
 
             <div class="qualification__tabs">
-                <div class="qualification__button button--flex" data-target="#education">
-                    <i class="bx bxs-graduation qualification__icon"></i>
-                    <p>Academic</p>
-                </div>
-
-                <div class="qualification__button button--flex qualification__active" data-target="#work">
+                <div class="btn btn-active" data-target="#work">
                     <i class="bx bx-briefcase qualification__icon"></i>
                     <p>Professional</p>
+                </div>
+                <div class="btn" data-target="#education">
+                    <i class="bx bxs-graduation qualification__icon"></i>
+                    <p>Academic</p>
                 </div>
             </div>
 
@@ -197,12 +199,12 @@
                 <div class="qualification__content" data-content id="education">
                     <div class="qualification__data">
                         <div>
-                            <h3 class="qualification__title">M.Sc - Computer science</h3>
-                            <span class="qualification__subtitle">Open university, Israel</span>
                             <div class="qualification__calendar">
                                 <i class='bx bxs-calendar'></i>
                                 2023 - NOW
                             </div>
+                            <h3 class="qualification__title">M.Sc - Computer science</h3>
+                            <span class="qualification__subtitle">Open university, Israel</span>
                         </div>
 
                         <div>
@@ -220,30 +222,56 @@
                         </div>
 
                         <div>
-                            <h3 class="qualification__title">B.Sc - Electrical & Electronic Engineering</h3>
-                            <span class="qualification__subtitle">Shenkar College, Israel</span>
-                            <span class="qualification__subtitle"><i class='bx bxs-medal'></i> GPA 94/100</span>
-                            <span class="qualification__subtitle">Concentrations: Robotics & VLSI</span>
                             <div class="qualification__calendar">
                                 <i class='bx bxs-calendar'></i>
                                 2018 - 2021
                             </div>
+                            <h3 class="qualification__title">B.Sc - Electrical & Electronic Engineering</h3>
+                            <span class="qualification__subtitle">Shenkar College, Israel</span>
+                            <p>
+                                <span class="qualification__subtitle"><i class='bx bxs-medal'></i> GPA 94/100</span>
+                            </p>
+                            <p>
+                                <span class="qualification__subtitle">Concentrations: Robotics & VLSI</span>
+                            </p>
+
                         </div>
                     </div>
 
                     <div class="qualification__data">
                         <div>
-                            <h3 class="qualification__title">P.Eng - Electronics and Computers</h3>
-                            <span class="qualification__subtitle">Holtz College, Israel</span>
-                            <span class="qualification__subtitle">Concentrations: Computers & Communication</span>
                             <div class="qualification__calendar">
                                 <i class='bx bxs-calendar'></i>
                                 2008 - 2010
                             </div>
+                            <h3 class="qualification__title">P.Eng - Electronics and Computers</h3>
+                            <span class="qualification__subtitle">Holtz College, Israel</span>
+                            <span class="qualification__subtitle">Concentrations: Computers & Communication</span>
+
                         </div>
 
                         <div>
                             <span class="qualification__rounder"></span>
+                        </div>
+                    </div>
+
+                    <div class="courses">
+                        <h3 class="courses-title">
+                            <i class='bx bx-book-open'></i>
+                            Courses and Certifications
+                        </h3>
+                        <div class="courses-list">
+                            <ul>
+                                <li><span class="material-symbols-outlined">done</span>
+                                    TensorFlow Developer (Udemy)</li>
+                                <li><span class="material-symbols-outlined">done</span>
+                                    ROS2 for Beginners (Udemy)</li>
+                                <li><span class="material-symbols-outlined">done</span>
+                                    The Git & Github Bootcamp (Udemy)</li>
+                                <li><span class="material-symbols-outlined">done</span>
+                                    EMP - Electronic Music Production (BPM Collage)</li>
+                                <li></li>
+                            </ul>
                         </div>
                     </div>
 
@@ -253,12 +281,12 @@
 
                     <div class="qualification__data">
                         <div>
-                            <h3 class="qualification__title">Senior Computer vision engineer</h3>
-                            <span class="qualification__subtitle">Eyelight</span>
                             <div class="qualification__calendar">
                                 <i class='bx bxs-calendar'></i>
                                 2022 - 2023
                             </div>
+                            <h3 class="qualification__title">Senior Computer vision engineer</h3>
+                            <span class="qualification__subtitle">Eyelight</span>
                         </div>
 
                         <div>
@@ -266,39 +294,45 @@
                             <span class="qualification__line"></span>
                         </div>
                     </div>
+
+
 
                     <div class="qualification__data">
                         <div></div>
-
-                        <div class="qualification__time">
+                        <div>
                             <span class="qualification__rounder"></span>
                             <span class="qualification__line"></span>
                         </div>
-
                         <div>
-                            <h3 class="qualification__title">Integration and Validation engineer</h3>
-                            <span class="qualification__subtitle">Israeli Aerospace Industries</span>
-                            <div class="qualification__calendar">
-                                <i class='bx bxs-calendar'></i>
-                                2019 - 2022
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="qualification__data">
-                        <div>
-                            <h3 class="qualification__title">Lecturer assistant</h3>
-                            <span class="qualification__subtitle">Shenkar College</span>
                             <div class="qualification__calendar">
                                 <i class="bx bxs-calendar"></i>
                                 2021 - 2022
                             </div>
+                            <h3 class="qualification__title">Lecturer assistant</h3>
+                            <span class="qualification__subtitle">Shenkar College</span>
+
                         </div>
 
+
+                    </div>
+
+                    <div class="qualification__data">
                         <div>
+                            <div class="qualification__calendar">
+                                <i class='bx bxs-calendar'></i>
+                                2019 - 2022
+                            </div>
+                            <h3 class="qualification__title">Integration and Validation engineer</h3>
+                            <span class="qualification__subtitle">Israeli Aerospace Industries</span>
+                        </div>
+
+                        <div class="qualification__time">
                             <span class="qualification__rounder"></span>
                             <span class="qualification__line"></span>
                         </div>
+
+                        <div></div>
+
                     </div>
 
                     <div class="qualification__data">
@@ -310,47 +344,30 @@
                         </div>
 
                         <div>
-                            <h3 class="qualification__title">Technical team leader</h3>
-                            <span class="qualification__subtitle">Alstom</span>
                             <div class="qualification__calendar">
                                 <i class="bx bxs-calendar"></i>
                                 2014 - 2019
                             </div>
+                            <h3 class="qualification__title">Technical team leader</h3>
+                            <span class="qualification__subtitle">Alstom</span>
                         </div>
                     </div>
 
                     <div class="qualification__data">
                         <div>
 
-                            <h3 class="qualification__title">Aircraft Technical team leader</h3>
-                            <span class="qualification__subtitle">Israeli Air Forces</span>
                             <div class="qualification__calendar">
                                 <i class="bx bxs-calendar"></i>
                                 2010 - 2014
                             </div>
+                            <h3 class="qualification__title">Aircraft Technical team leader</h3>
+                            <span class="qualification__subtitle">Israeli Air Forces</span>
                         </div>
 
                         <div>
                             <span class="qualification__rounder"></span>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="courses">
-                <h3 class="courses-title">
-                    <i class='bx bx-book-open'></i>
-                    Courses and Certifications
-                </h3>
-                <div class="courses-list">
-                    <ul>
-                        <li><i class='bx  bx-right-arrow'></i>TensorFlow Developer (Udemy)</li>
-                        <li><i class='bx  bx-right-arrow'></i>ROS2 for Beginners (Udemy)</li>
-                        <li><i class='bx  bx-right-arrow'></i>The Git & Github Bootcamp (Udemy)</li>
-                        <li><i class='bx  bx-right-arrow'></i>EMP - Electronic Music Production (BPM Collage)</li>
-                        <li><img src="https://www.codewars.com/users/Alex-Winner/badges/small" alt=""></li>
-
-                    </ul>
                 </div>
             </div>
         </div>
@@ -371,12 +388,11 @@
             <div class="skills__container grid">
 
                 <div>
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="bx bx-brain skills__icon"></i>
+                    <div class="skills__content   skills__close">
+                        <div class="skills__header ">
+                            <span class="material-symbols-outlined skills__icon">visibility</span>
                             <div>
-                                <h3 class="skills__title">Computer Vision &amp; AI</h3>
-                                <span class="skills__subtitle">3+ Years XP</span>
+                                <h3 class="skills__title">Computer Vision</h3>
                             </div>
                             <i class='bx bx-chevron-down skills__arrow'></i>
                         </div>
@@ -391,10 +407,9 @@
                                 <li>Image Segmentation</li>
                                 <li>Feature Extraction</li>
                                 <li>Pose Estimation</li>
+                                <li>Point Cloud Processing</li>
                                 <li>Stereo Vision</li>
-                                <li>Convolutional Neural Networks (CNNs)</li>
-                                <li>Recurrent Neural Networks (RNNs)</li>
-                                <li>Transfer Learning</li>
+                                <li>VR/AR Development Platforms (e.g., Unity3D)</li>
                             </ul>
 
                         </div>
@@ -402,10 +417,10 @@
 
                     <div class="skills__content skills__close">
                         <div class="skills__header">
-                            <i class='bx bx-code-curly skills__icon'></i>
+                            <span class="material-symbols-outlined skills__icon">code</span>
+
                             <div>
-                                <h3 class="skills__title">Programming Languages and Frameworks</h3>
-                                <span class="skills__subtitle">3+ Years XP</span>
+                                <h3 class="skills__title">Programming Languages</h3>
                             </div>
 
                             <i class='bx bx-chevron-down skills__arrow'></i>
@@ -421,12 +436,8 @@
                                 <li>JavaScript</li>
                                 <li>Assembly</li>
                                 <li>SQL</li>
-                                <li>OpenCV</li>
-                                <li>Open3D</li>
-                                <li>TensorFlow</li>
-                                <li>Pandas</li>
-                                <li>Matplotlib</li>
-                                <li>Numpy</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
                             </ul>
 
                         </div>
@@ -434,10 +445,9 @@
 
                     <div class="skills__content skills__close">
                         <div class="skills__header">
-                            <i class='bx bx-devices skills__icon'></i>
+                            <span class="material-symbols-outlined skills__icon">memory</span>
                             <div>
-                                <h1 class="skills__title">Hardware and Sensors</h1>
-                                <span class="skills__subtitle">2+ Years XP</span>
+                                <h3 class="skills__title">Hardware and Sensors</h3>
                             </div>
 
                             <i class='bx bx-chevron-down skills__arrow'></i>
@@ -452,7 +462,6 @@
                                 <li>Robotics Hardware Integration</li>
                                 <li>Motors/Actuators Control</li>
                                 <li>GPIO Control</li>
-                                <li>Camera Module Integration</li>
                                 <li>Sensor Data Acquisition (e.g., IMU, Ultrasonic)</li>
                                 <li>Communication Protocols (e.g., IIC, SPI, PWM, UART)</li>
                                 <li>Microcontroller Programming (e.g., Arduino, Raspberry Pi)</li>
@@ -462,38 +471,68 @@
 
                         </div>
                     </div>
-                </div>
-                <div>
+
                     <div class="skills__content skills__close">
                         <div class="skills__header">
-                            <i class="uil uil-swatchbook skills__icon"></i>
+                            <span class="material-symbols-outlined skills__icon">self_improvement</span>
 
                             <div>
-                                <h1 class="skills__title">Machine Learning and Deep Learning</h1>
-                                <span class="skills__subtitle">2+ Years XP</span>
+                                <h3 class="skills__title">Soft Skills</h>
                             </div>
 
                             <i class='bx bx-chevron-down skills__arrow'></i>
                         </div>
 
                         <div class="skills__list grid">
-           
+
+                            <ul>
+                                <li>Linear algebra / Statistics / Calculus</li>
+                                <li>Markdown</li>
+                                <li>Technical Writing / Documentation</li>
+                                <li>Presentation Skills</li>
+                                <li>Problem Solving</li>
+                                <li>Critical Thinking</li>
+                                <li>Communication</li>
+                                <li>Teamwork / Leadership</li>
+                                <li>Creativity</li>
+                                <li>Time Management</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="bx bx-brain skills__icon"></i>
+
+                            <div>
+                                <h3 class="skills__title">Machine Learning and Deep Learning</h3>
+                            </div>
+
+                            <i class='bx bx-chevron-down skills__arrow'></i>
+                        </div>
+
+                        <div class="skills__list grid">
+
                             <ul>
                                 <li>Data Preprocessing</li>
                                 <li>Model Training</li>
                                 <li>Hyperparameter Tuning</li>
                                 <li>Model Evaluation</li>
+                                <li>Convolutional Neural Networks (CNNs)</li>
+                                <li>Recurrent Neural Networks (RNNs)</li>
+                                <li>Transfer Learning</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="skills__content skills__close">
                         <div class="skills__header">
-                            <i class="uil uil-server-network skills__icon"></i>
+                            <i class="bx bx-wrench skills__icon"></i>
 
                             <div>
-                                <h1 class="skills__title">Software Development and Tools</h1>
-                                <span class="skills__subtitle">1+ Years XP</span>
+                                <h3 class="skills__title">Software Development and Tools</h3>
                             </div>
 
                             <i class='bx bx-chevron-down skills__arrow'></i>
@@ -506,6 +545,7 @@
                                 <li>Virtual Environment(e.g., WSL, WMware)</li>
                                 <li>IDEs (e.g., Visual Studio Code, PyCharm)</li>
                                 <li>Debugging and Profiling</li>
+                                <li>Networking</li>
                             </ul>
 
                         </div>
@@ -513,11 +553,9 @@
 
                     <div class="skills__content skills__close">
                         <div class="skills__header">
-                            <i class="uil uil-analysis skills__icon"></i>
-
+                            <span class="material-symbols-outlined skills__icon">precision_manufacturing</span>
                             <div>
-                                <h1 class="skills__title">3D Computer Vision and Robotics</h1>
-                                <span class="skills__subtitle">4+ Years XP</span>
+                                <h3 class="skills__title">Robotics</h3>
                             </div>
 
                             <i class='bx bx-chevron-down skills__arrow'></i>
@@ -525,9 +563,7 @@
 
                         <div class="skills__list grid">
                             <ul>
-                                <li>Point Cloud Processing</li>
                                 <li>SLAM (Simultaneous Localization and Mapping)</li>
-                                <li>VR/AR Development Platforms (e.g., Unity3D)</li>
                                 <li>Robot Operating System (ROS2)</li>
                                 <li>PID Control</li>
                                 <li>Kinematics and Dynamics</li>
@@ -537,40 +573,32 @@
                                 <li>Robot Hardware Integration (e.g., motor controllers, sensors)</li>
                                 <li>Robot Behavior Programming</li>
                             </ul>
-                                </div>
-                            </div>
-                                </div>
-                <div>
+                        </div>
+                    </div>
+
                     <div class="skills__content skills__close">
                         <div class="skills__header">
-                            <i class="uil uil-swatchbook skills__icon"></i>
-
+                            <span class="material-symbols-outlined skills__icon">book_4</span>
                             <div>
-                                <h1 class="skills__title">Soft Skills</h1>
-                                <span class="skills__subtitle">2+ Years XP</span>
+                                <h3 class="skills__title">Libraries</h3>
                             </div>
 
                             <i class='bx bx-chevron-down skills__arrow'></i>
-                            </div>
+                        </div>
 
                         <div class="skills__list grid">
-           
                             <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Linear algebra / Statistics / Calculus</li>
-                                <li>Markdown</li>                                
-                                <li>Technical Writing / Documentation</li>
-                                <li>Presentation Skills</li>
-                                <li>Problem Solving</li>
-                                <li>Critical Thinking</li>
-                                <li>Communication</li>
-                                <li>Teamwork / Leadership</li>
-                                <li>Creativity</li>
-                                <li>Time Management</li>
+                                <li>OpenCV</li>
+                                <li>Open3D</li>
+                                <li>TensorFlow</li>
+                                <li>Pandas</li>
+                                <li>Matplotlib</li>
+                                <li>Numpy</li>
+                                <li>TkInter</li>
                             </ul>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -595,10 +623,7 @@
     <!-- ======== CONTACT SECTION ======== -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="contact-head">
-                <h2 class="section__title">Contact Me</h2>
-                <p>Get in touch....</p>
-            </div>
+            <h2 class="section__title">Contact Me</h2>
             <div class="contact-content">
                 <div class="left-side">
                     <div class="address details">
@@ -616,8 +641,7 @@
                         <i class='bx bxs-envelope'></i>
                         <div class="topic">Email</div>
 
-                        <div class="text-one"><a
-                                href="mailto:volodalex90@gmail.com">volodalex90@gmail.com</a></div>
+                        <div class="text-one"><a href="mailto:volodalex90@gmail.com">volodalex90@gmail.com</a></div>
                     </div>
                 </div>
 
@@ -631,10 +655,11 @@
                                 class='bx bxl-facebook'></i></a>
                         <a href="https://twitter.com/AlyxWinner" target="_blank"><i class='bx bxl-twitter'></i></a>
                     </div>
-                    <div class="topic-text">Send me a message to 
-                        <a href="">volodalex90@gmail.com</a></div>
-                    <p>If you have any projects or inquiries related to my expertise, 
-                        feel free to send me a message here. 
+                    <div class="topic-text">Send me a message to
+                        <a href="">volodalex90@gmail.com</a>
+                    </div>
+                    <p>If you have any projects or inquiries related to my expertise,
+                        feel free to send me a message here.
                         I'm here to assist you and eager to collaborate</p>
                     <form name="contact-form" target="_blank" action="https://formspree.io/f/xbjvwgwv" method="POST">
                         <label>
@@ -653,7 +678,7 @@
                             </div>
                         </label>
                         <div class="button">
-                            <input type="submit" value="Send Now" onclick="submitForm()"/>
+                            <input type="submit" value="Send Now" onclick="submitForm()" />
                         </div>
                     </form>
                 </div>
