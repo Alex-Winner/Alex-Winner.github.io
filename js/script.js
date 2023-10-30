@@ -5,15 +5,6 @@ window.addEventListener("scroll", function () {
 });
 
 
-function naVbar() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
-
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
 
@@ -110,27 +101,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 /*==================== QUALIFICATION TABS ====================*/
-const tabs = document.querySelectorAll('[data-target]'),
-    tabContents = document.querySelectorAll('[data-content]')
+const tabs = document.querySelectorAll('[data-target]');
+const tabContents = document.querySelectorAll('[data-content]');
 
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
         const target = document.querySelector(tab.dataset.target)
 
         tabContents.forEach(tabContent => {
-            tabContent.classList.remove('qualification__active')
+            tabContent.classList.remove('qualification__active');
         })
-        target.classList.add('qualification__active')
+        target.classList.add('qualification__active');
 
         tabs.forEach(tab => {
-            tab.classList.remove('btn-active')
+            tab.classList.remove('btn-active');
         })
-        tab.classList.add('btn-active')
-    })
-})
+        tab.classList.add('btn-active');
+    });
+});
 
-
-// Skills 
+/* ==================== Skills ==================== */
 const skills = document.querySelectorAll('.skills__content');
 const skillArrows = document.querySelectorAll('.skills__arrow');
 
