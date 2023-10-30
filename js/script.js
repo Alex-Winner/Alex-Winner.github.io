@@ -4,6 +4,19 @@ window.addEventListener("scroll", function () {
     header.classList.toggle("sticky", window.scrollY > 100);
 });
 
+const menuIcon = document.querySelector(".menuIcon");
+const navBar = document.querySelector(".navlist");
+const navBtns = document.querySelectorAll(".nav-menu-btn");
+
+menuIcon.onclick = function () {
+    navBar.classList.toggle("showNav");
+}
+
+navBtns.forEach(navBtn => {
+    navBtn.onclick = function () {
+        navBar.classList.remove("showNav");
+    }
+});
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')

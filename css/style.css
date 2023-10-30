@@ -137,7 +137,6 @@ header span {
     font-weight: 500;
     margin: 0 10px;
     transition: all .45s ease;
-
 }
 
 .navlist a:hover {
@@ -635,9 +634,11 @@ header span {
     justify-content: center;
 }
 
+
 .show {
     display: block;
 }
+
 
 /* ===== SKILLS SECTION ===== */
 .skills .skills__content {
@@ -893,6 +894,10 @@ header span {
 }
 
 
+.menuIcon {
+    display: none;
+}
+    
 /* Extra Extra Large screens */
 @media (min-width: 1201px) {
     /* Your CSS rules for extra extra large screens here */
@@ -904,17 +909,63 @@ header span {
 }
 
 
+
+
 /* Large screens */
 @media (max-width: 992px) {
     #menu-icon {
         display: block;
     }
+    .menuIcon {
+        display: block;
+        cursor: pointer;
+    }
 
+    .menuIcon .line {
+        width: 30px;
+        height: 3px;
+        background: var(--main-color);
+        margin: 6px 0;
+    }
+
+    .navlist {
+        display: block;
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: var(--second-bg-color);
+        background-image: url(/img/noise.png);
+        background-size: 200px 200px;
+        transition: 0.2s;
+        text-align: center;
+        line-height: 1.8rem;
+        overflow: hidden;
+    }
+    
+    .navlist.showNav {
+        height: fit-content;
+        padding: 20px;
+    }
+    
+
+    .navlist ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+    }
+
+
+
+    /*
     .navlist {
         display: block;
         width: 100%;
         text-align: center;
     }
+    */
 
     .container .contact-content .right-side {
         width: 75%;
@@ -964,10 +1015,6 @@ header span {
 
 /* Medium screens */
 @media (max-width: 768px) {
-    .navlist.show {
-        display: block;
-    }
-
     .menu-toggle {
         display: flex;
     }
