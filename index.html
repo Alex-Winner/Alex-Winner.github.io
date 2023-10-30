@@ -27,7 +27,8 @@
 
     <!-- ======== HEADER ======== -->
     <header>
-        <div class="container">
+        <div class="container" id="myTopnav">
+
             <a href="#" class="logo"><span>A</span>lex <span>W</span>inner</a>
 
             <ul class="navlist">
@@ -63,6 +64,16 @@
 
                             </div>
                         </div>
+
+                    </div>
+                    <div class="container-right">
+                        <!--span class="material-symbols-outlined">
+                            visibility
+                            </span-->
+                        <!--img src="" alt=""-->
+                    </div>
+                </div>
+                <div class="container-home-bottom">
                         <div class="contact-icons">
                             <a href="mailto:volodalex90@gmail.com"><i class='bx bxl-gmail'></i></a>
                             <a href="https://github.com/Alex-Winner" target="_blank"><i class='bx bxl-github'></i></a>
@@ -72,15 +83,6 @@
                                     class='bx bxl-facebook'></i></a>
                             <a href="https://twitter.com/AlyxWinner" target="_blank"><i class='bx bxl-twitter'></i></a>
                         </div>
-                    </div>
-                    <div class="container-right">
-                        <img src="" alt="">
-                    </div>
-                </div>
-                <div class="container-home-bottom">
-                    <div class="container-left">
-                    </div>
-                    <div class="container-right"></div>
                 </div>
             </div>
         </div>
@@ -90,7 +92,6 @@
     <section class="about" id="about">
         <h2 class="section__title">About</h2>
         <div class="container">
-            <div class="container-home">
                 <div class="container-upper">
                     <div class="container-left">
                         <img src="img/about.jpg" alt="">
@@ -112,13 +113,6 @@
                             <a href="#contact" class="btn"><i class='bx bxs-contact'></i> Contact Me</a>
                         </div>
                     </div>
-                </div>
-                <div class="container-about-bottom">
-                    <div class="container-left">
-
-                    </div>
-                    <div class="container-right"></div>
-                </div>
             </div>
         </div>
     </section>
@@ -131,7 +125,7 @@
                 <h2 class="section__title">Portfolio</h2>
                 <span class="section__subtitle">this is my works</span>
 
-                <div id="myBtnContainer">
+                <div class="myBtnContainer" id="myBtnContainer">
                     <a class="btn btn-active" onclick="filterSelection('all')"> Show all</a>
                     <a class="btn" onclick="filterSelection('project-cv')">Computer
                         Vision</a>
