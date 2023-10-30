@@ -57,13 +57,15 @@ header {
     right: 0;
     z-index: 1000;
 
-    background: transparent;
-    border-bottom: 1px solid transparent;
+    /*background: transparent;*/
+    /*border-bottom: 1px solid transparent;*/
     transition: all .45s ease;
 }
 
 header.sticky {
-    background: var(--bg-color);
+    background-color: var(--bg-color);
+    background-image: url(/img/noise.png);
+    background-size: 200px 200px;
     border-bottom: 1.5px solid var(--second-bg-color);
 }
 
@@ -570,6 +572,7 @@ header span {
 }
 
 .modal-title {
+    color: var(--second-color);
     margin-bottom: 10px;
     text-align: center;
 }
@@ -583,7 +586,7 @@ header span {
     margin: auto;
     padding: 20px;
     border-radius: 20px;
-    width: 50%;
+    width: 60%;
     box-sizing: border-box;
 }
 
@@ -598,11 +601,16 @@ header span {
     object-fit: cover;
 }
 
+.modal-head {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 /* The Close Button */
 .close {
-    padding: 20px;
     color: var(--main-color);
-    float: right;
     font-size: 36px;
     font-weight: bold;
 }
@@ -722,14 +730,14 @@ header span {
 }
 
 .contact-content {
-    border: #547924 dashed 2px;
+    /*border: #547924 dashed 2px;*/
+    padding-bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .contact-content .left-side {
-    border: #547924 dashed 2px;
     width: 30%;
     height: 100%;
     display: flex;
@@ -744,19 +752,19 @@ header span {
 .contact-content .left-side::before {
     content: "";
     position: absolute;
-    height: 70%;
+    height: 90%;
     width: 2px;
     right: -30px;
     top: 50%;
     transform: translateY(-50%);
-    background: #ffffff;
+    background: var(--text-color);
 }
 
 .contact-content .left-side .details {
     margin-bottom: 20px;
     box-sizing: border-box;
     text-align: center;
-    border: dashed white 1px;
+    /*border: dashed white 1px;*/
     width: 180px;
 }
 
@@ -936,9 +944,11 @@ header span {
         left: 0;
         right: 0;
         width: 100vw;
-        background-color: var(--second-bg-color);
+        background-color: var(--bg-color);
         background-image: url(/img/noise.png);
         background-size: 200px 200px;
+        border-bottom: 1.5px var(--second-bg-color) solid;
+        border-top: 1.5px var(--second-bg-color) solid;
         transition: 0.2s;
         text-align: center;
         line-height: 1.8rem;
@@ -956,16 +966,6 @@ header span {
         width: fit-content;
         margin: 80px auto 0 auto;
     }
-
-
-
-    /*
-    .navlist {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-    */
 
     .container .contact-content .right-side {
         width: 75%;
@@ -1003,18 +1003,34 @@ header span {
         width: 90%;
     }
 
-    .about .center-text {
+    .about .center-text,
+    .home .text {
+        align-items: center;
         flex-direction: column;
     }
 
     .about .center-text a {
         text-align: center;
     }
+
+    .about .btn,
+    .home .btn {
+        width: 250px;
+    }
+
+
+    .modal-content {
+        width: 90%;
+    }
 }
 
 
 /* Medium screens */
 @media (max-width: 768px) {
+    .modal-content {
+        width: 100%;
+    }
+
     .menu-toggle {
         display: flex;
     }
