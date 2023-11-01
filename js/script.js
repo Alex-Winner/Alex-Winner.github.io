@@ -1,3 +1,12 @@
+// Typing animation
+const typed = new Typed(".typing-text", {
+    strings: ["Comuper Vision", "Robotics"],
+    typeSpeed: 150,
+    backSpeed: 150,
+    loop: true
+});
+
+
 // Navigation bar
 
 const header = document.querySelector('header');
@@ -11,11 +20,16 @@ const navBtns = document.querySelectorAll(".nav-menu-btn");
 
 menuIcon.onclick = function () {
     navBar.classList.toggle("showNav");
+    navBar.classList.toggle("bottom-border");
+
+    menuIcon.classList.toggle("change");
 }
 
 navBtns.forEach(navBtn => {
     navBtn.onclick = function () {
         navBar.classList.remove("showNav");
+        navBar.classList.remove("bottom-border");
+        menuIcon.classList.remove("change");
     }
 });
 

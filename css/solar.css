@@ -1,0 +1,76 @@
+.universe {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.solar-system {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    transform-origin: center;
+    animation: rotate 20s linear infinite;
+    z-index: -1;
+}
+
+.sun {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+
+    background-color: transparent;
+    border-radius: 50%;
+    /*border: solid var(--second-color) 2px;*/
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 120px 20px var(--second-color); 
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.planet {
+    position: absolute;
+    top: -128px;
+    left: 50%;
+    width: 50px;
+    background-color: var(--main-color);
+    height: 50px;
+    /*border: solid var(--main-color) 5px;*/
+    opacity: 0.6;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.moon {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    width: 20px;
+    background-color: #969696;
+    /*border: solid var(--text-color) 2px;*/
+    height: 20px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+
+.moon::before {
+    background: linear-gradient(transparent, #ecf0f1);
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
