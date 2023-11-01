@@ -23,6 +23,7 @@
     <title>Alyx Winner</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/solar.css">
 </head>
 
 <body>
@@ -34,9 +35,9 @@
             <a href="#" class="logo"><span>A</span>lex <span>W</span>inner</a>
 
             <div class="menuIcon">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
 
             <ul class="navlist">
@@ -61,24 +62,28 @@
                 <div class="container-upper">
                     <div class="container-left">
                         <div class="home-content">
-                            <div class="text">
-                                <h2>Hi there!</h2>
-                                <h1>I Am a
-                                    <span class="typing-text">Comuper Vision Developer</span>
-                                    <span class="typed-cursor" aria-hidden="true">|</span>
-                                </h1>
-                                <p>Computer vision developer with Experience in SW and HW.</p>
-                                <a href="#about" class="btn"><i class="fas fa-user"></i> about me</a>
-
+                            <h2>Hi there!</h2>
+                            <div id="intro-text">I Am a <span class="typing-text">Comuper Vision</span><br>Engineer.
                             </div>
+                            <div class="text">
+
+                                <p>"In computer vision, we teach machines to understand the visual world,
+                                    enabling them to see, interpret, and make decisions based on images
+                                    and videos." - Andrew Ng</p>
+                                    <a href="#about" class="btn"><i class="fas fa-user"></i> about me</a>
+                                </div>
                         </div>
 
                     </div>
                     <div class="container-right">
-                        <!--span class="material-symbols-outlined">
-                            visibility
-                            </span-->
-                        <!--img src="" alt=""-->
+                        <div class="universe">
+                            <div class="solar-system">
+                                <div class="sun"></div>
+                                <div class="planet">
+                                    <div class="moon"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="container-home-bottom">
@@ -98,24 +103,34 @@
 
     <!-- ======== ABOUT SECTION ======== -->
     <section class="about" id="about">
-        <h2 class="section__title">About</h2>
         <div class="container">
+            <h2 class="section__title">About</h2>
             <div class="container-upper">
                 <div class="container-left">
                     <img src="img/about.jpg" alt="">
                 </div>
                 <div class="container-right">
-                    <h2>My name is Alex</h2>
-                    <p>Hello! I'm an Electronics Engineer with a focus on Robotics,
-                        VLSI, and a passion for Computer Vision and AI. With 13 years
+                    <h2>My name is <span class="second-color">&ltAlex&gt <i class='bx bx-wink-smile'></i></span></h2>
+                    <p>Hello! I'm an Electronics Engineer with a focus on <span class="bold main-color">Robotics</span>,
+                        <span class="bold main-color">VLSI</span>, and a passion for <span
+                            class="bold center-content main-color"><i class='bx bx-show'></i> Computer Vision</span>
+                        and <span class="bold main-color"><i class='bx bx-brain'></i> AI</span>.
+                    </p>
+                    <p>With 13+ years
                         in technical roles and an ongoing MSc degree, I bring extensive
                         experience alongside a strong foundation in mathematics and programming,
-                        primarily in Python.</p>
+                        primarily in <span class="bold center-content second-color"><i class='bx bxl-python'></i>
+                            Python</span>.</p>
                     <p>My leadership skills are honed over a decade,
                         and my ability to provide innovative solutions crosses various
-                        engineering domains. Currently, I'm leveraging my background to specialize
-                        in Computer Vision, aiming to master this rapidly evolving field. Let's
-                        connect and explore how my skills can contribute to your project's success!</p>
+                        engineering domains.</p>
+                    <p>Currently, I'm leveraging my background to specialize
+                        in <span class="bold main-color"><i class='bx bx-show'></i> Computer Vision</span>, aiming to
+                        master this rapidly evolving field.
+                        <span class="bold second-color">Let's connect <i class='bx bx-chat'></i></span> and explore how
+                        my skills can
+                        contribute to your project's success!
+                    </p>
                     <div class="center-text">
                         <a href="Alex_CV.pdf" class="btn" download><i class='bx bxs-download'></i> Download CV</a>
                         <a href="#contact" class="btn"><i class='bx bxs-contact'></i> Contact Me</a>
@@ -436,6 +451,111 @@
 
                     <div class="skills__content skills__close">
                         <div class="skills__header">
+                            <i class="bx bx-brain skills__icon"></i>
+
+                            <div>
+                                <h3 class="skills__title">Machine Learning and Deep Learning</h3>
+                            </div>
+
+                            <i class='bx bx-chevron-down skills__arrow'></i>
+                        </div>
+
+                        <div class="skills__list grid">
+
+                            <ul>
+                                <li>Data Preprocessing</li>
+                                <li>Model Training</li>
+                                <li>Hyperparameter Tuning</li>
+                                <li>Model Evaluation</li>
+                                <li>Convolutional Neural Networks (CNNs)</li>
+                                <li>Recurrent Neural Networks (RNNs)</li>
+                                <li>Transfer Learning</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <span class="material-symbols-outlined skills__icon">memory</span>
+                            <div>
+                                <h3 class="skills__title">Hardware</h3>
+                            </div>
+
+                            <i class='bx bx-chevron-down skills__arrow'></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <ul>
+                                <li>Cameras and Imaging Sensors</li>
+                                <li>LiDAR (e.g., Slamtec RPLIDAR)</li>
+                                <li>Depth Sensors (e.g., Realsense, Luxonis)</li>
+                                <li>Motors/Actuators Control</li>
+                                <li>GPIO Control</li>
+                                <li>Sensor Data Acquisition (e.g., IMU, Ultrasonic)</li>
+                                <li>Communication Protocols (e.g., IIC, SPI, PWM, UART)</li>
+                                <li>Microcontroller Programming (e.g., Arduino, Raspberry Pi)</li>
+                                <li>Oscilloscope / Spectrum analyzer / Logic analyzer</li>
+                                <li>Electronic Circuit Design (Analog/Digital with LTspice)</li>
+                                <li>PCB Design (e.g., EasyEDA, KiCAD)</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <span class="material-symbols-outlined skills__icon">precision_manufacturing</span>
+                            <div>
+                                <h3 class="skills__title">Robotics</h3>
+                            </div>
+
+                            <i class='bx bx-chevron-down skills__arrow'></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <ul>
+                                <li>SLAM (Simultaneous Localization and Mapping)</li>
+                                <li>Robot Operating System (ROS2)</li>
+                                <li>PID Control</li>
+                                <li>Kinematics and Dynamics</li>
+                                <li>Robot Perception</li>
+                                <li>Path Planning</li>
+                                <li>Robot Vision Integration</li>
+                                <li>Robot Hardware Integration (e.g., motor controllers, sensors)</li>
+                                <li>Robot Behavior Programming</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="bx bx-wrench skills__icon"></i>
+
+                            <div>
+                                <h3 class="skills__title">Software Development and Tools</h3>
+                            </div>
+
+                            <i class='bx bx-chevron-down skills__arrow'></i>
+                        </div>
+
+                        <div class="skills__list grid">
+                            <ul>
+                                <li>Git and Version Control</li>
+                                <li>Linux/Unix Environments</li>
+                                <li>Virtual Environment(e.g., WSL, WMware)</li>
+                                <li>IDEs (e.g., Visual Studio Code, PyCharm)</li>
+                                <li>Debugging and Profiling</li>
+                                <li>Networking</li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
                             <span class="material-symbols-outlined skills__icon">code</span>
 
                             <div>
@@ -464,9 +584,9 @@
 
                     <div class="skills__content skills__close">
                         <div class="skills__header">
-                            <span class="material-symbols-outlined skills__icon">memory</span>
+                            <span class="material-symbols-outlined skills__icon">book_4</span>
                             <div>
-                                <h3 class="skills__title">Hardware and Sensors</h3>
+                                <h3 class="skills__title">Main Libraries</h3>
                             </div>
 
                             <i class='bx bx-chevron-down skills__arrow'></i>
@@ -474,20 +594,14 @@
 
                         <div class="skills__list grid">
                             <ul>
-                                <li>Cameras and Imaging Sensors</li>
-                                <li>LiDAR (e.g., Slamtec RPLIDAR)</li>
-                                <li>Depth Sensors (e.g., Realsense, Luxonis)</li>
-                                <li>Embedded Systems</li>
-                                <li>Robotics Hardware Integration</li>
-                                <li>Motors/Actuators Control</li>
-                                <li>GPIO Control</li>
-                                <li>Sensor Data Acquisition (e.g., IMU, Ultrasonic)</li>
-                                <li>Communication Protocols (e.g., IIC, SPI, PWM, UART)</li>
-                                <li>Microcontroller Programming (e.g., Arduino, Raspberry Pi)</li>
-                                <li>Oscilloscope / Spectrum analyzer</li>
-                                <li>PCB Design</li>
+                                <li>OpenCV</li>
+                                <li>Open3D</li>
+                                <li>TensorFlow</li>
+                                <li>Pandas</li>
+                                <li>Matplotlib</li>
+                                <li>Numpy</li>
+                                <li>TkInter</li>
                             </ul>
-
                         </div>
                     </div>
 
@@ -518,107 +632,8 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
-                <div>
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="bx bx-brain skills__icon"></i>
 
-                            <div>
-                                <h3 class="skills__title">Machine Learning and Deep Learning</h3>
-                            </div>
-
-                            <i class='bx bx-chevron-down skills__arrow'></i>
-                        </div>
-
-                        <div class="skills__list grid">
-
-                            <ul>
-                                <li>Data Preprocessing</li>
-                                <li>Model Training</li>
-                                <li>Hyperparameter Tuning</li>
-                                <li>Model Evaluation</li>
-                                <li>Convolutional Neural Networks (CNNs)</li>
-                                <li>Recurrent Neural Networks (RNNs)</li>
-                                <li>Transfer Learning</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <i class="bx bx-wrench skills__icon"></i>
-
-                            <div>
-                                <h3 class="skills__title">Software Development and Tools</h3>
-                            </div>
-
-                            <i class='bx bx-chevron-down skills__arrow'></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <ul>
-                                <li>Git and Version Control</li>
-                                <li>Linux/Unix Environments</li>
-                                <li>Virtual Environment(e.g., WSL, WMware)</li>
-                                <li>IDEs (e.g., Visual Studio Code, PyCharm)</li>
-                                <li>Debugging and Profiling</li>
-                                <li>Networking</li>
-                            </ul>
-
-                        </div>
-                    </div>
-
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <span class="material-symbols-outlined skills__icon">precision_manufacturing</span>
-                            <div>
-                                <h3 class="skills__title">Robotics</h3>
-                            </div>
-
-                            <i class='bx bx-chevron-down skills__arrow'></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <ul>
-                                <li>SLAM (Simultaneous Localization and Mapping)</li>
-                                <li>Robot Operating System (ROS2)</li>
-                                <li>PID Control</li>
-                                <li>Kinematics and Dynamics</li>
-                                <li>Robot Perception</li>
-                                <li>Path Planning</li>
-                                <li>Robot Vision Integration</li>
-                                <li>Robot Hardware Integration (e.g., motor controllers, sensors)</li>
-                                <li>Robot Behavior Programming</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="skills__content skills__close">
-                        <div class="skills__header">
-                            <span class="material-symbols-outlined skills__icon">book_4</span>
-                            <div>
-                                <h3 class="skills__title">Libraries</h3>
-                            </div>
-
-                            <i class='bx bx-chevron-down skills__arrow'></i>
-                        </div>
-
-                        <div class="skills__list grid">
-                            <ul>
-                                <li>OpenCV</li>
-                                <li>Open3D</li>
-                                <li>TensorFlow</li>
-                                <li>Pandas</li>
-                                <li>Matplotlib</li>
-                                <li>Numpy</li>
-                                <li>TkInter</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </div>
     </section>
@@ -793,7 +808,9 @@
         <i class='bx bx-arrow-to-top scrollup__icon'></i>
     </a>
     <!-- import -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/solar_animation.js"></script>
 </body>
 
 </html>
