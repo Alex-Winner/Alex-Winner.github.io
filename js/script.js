@@ -1,124 +1,95 @@
-// Typing animation
-const typed = new Typed(".typing-text", {
-    strings: ["Comuper Vision", "Robotics"],
-    typeSpeed: 150,
-    backSpeed: 150,
-    loop: true
-});
+/* ==================== PORTFOLIO ==================== */
 
+// Filter portfolio items based on the selected category
+filterSelection("all");
 
-const menuIcon = document.querySelector(".menuIcon");
-const navBar = document.querySelector(".navbar");
-const navBtns = document.querySelectorAll(".nav-menu-btn");
-
-menuIcon.onclick = function () {
-    navBar.classList.toggle("showNav");
-    menuIcon.classList.toggle("change");
+// Function to filter portfolio items
+function filterSelection(category) {
+  const items = document.querySelectorAll(".filterDiv");
+  
+  // If 'all' is selected, no category filter is applied
+  if (category === "all") category = "";
+  
+  items.forEach((item) => {
+    item.classList.remove("show");
+    if (item.className.indexOf(category) > -1) item.classList.add("show");
+  });
 }
 
-navBtns.forEach(navBtn => {
-    navBtn.onclick = function () {
-        navBar.classList.remove("showNav");
-        menuIcon.classList.remove("change");
-    }
-});
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll('section[id]')
-
-
-function scrollActive() {
-    const scrollY = window.scrollY;
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 70;
-        const sectionId = current.getAttribute('id');
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.navbar a[href*=' + sectionId + ']').classList.add('active');
-        } else {
-
-            document.querySelector('.navbar a[href*=' + sectionId + ']').classList.remove('active');
-        };
-
-    });
-};
-
-window.addEventListener('scroll', scrollActive)
-
-
-// portfolio
-filterSelection("all")
-
-function filterSelection(c) {
-    const x = document.getElementsByClassName("filterDiv");
-    if (c == "all") c = "";
-    for (let i = 0; i < x.length; i++) {
-        removeClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
-    }
-}
-
+// Function to add a class to an element
 function addClass(element, name) {
-    let arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (let i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+  const classesToAdd = name.split(" ");
+  classesToAdd.forEach((cls) => {
+    if (!element.classList.contains(cls)) {
+      element.classList.add(cls);
     }
+  });
 }
 
+// Function to remove a class from an element
 function removeClass(element, name) {
-    let arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (let i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-        }
-    }
-    element.className = arr1.join(" ");
+  const classesToRemove = name.split(" ");
+  classesToRemove.forEach((cls) => {
+    element.classList.remove(cls);
+  });
 }
 
-// Add active class to the current button (highlight it)
+// Add an event listener to the portfolio buttons container
 const btnContainer = document.getElementById("myBtnContainer");
-const btns = btnContainer.querySelectorAll('.btn');
-btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        const currentBtn = document.querySelector(".btn-active");
-        currentBtn.classList.remove('btn-active');
-        btn.classList.add('btn-active');
-    })
-});
-
-
-
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Get all modal elements
-    const modals = document.querySelectorAll('.modal');
-
-    modals.forEach(modal => {
-        const modalBtn = document.getElementById(modal.id + "-btn");
-        const span = modal.getElementsByClassName("close")[0];
-
-        modalBtn.onclick = function () {
-            modal.style.display = "block";
-        }
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        window.addEventListener("click", function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        });
+if (btnContainer) {
+  const btns = btnContainer.getElementsByClassName('btn');
+  
+  // Add click event listeners to portfolio buttons
+  Array.from(btns).forEach(btn => {
+    btn.addEventListener('click', function () {
+      const currentActiveBtn = btnContainer.querySelector(".btn-active");
+      
+      // Remove the 'btn-active' class from the previously active button
+      if (currentActiveBtn) {
+        currentActiveBtn.classList.remove('btn-active');
+      }
+      
+      // Add the 'btn-active' class to the clicked button
+      btn.classList.add('btn-active');
     });
+  });
+}
+
+// Initialize modals when the DOM content is loaded
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Get all modal elements
+  const modals = document.querySelectorAll('.modal');
+
+  // Set up the modal functionality
+  modals.forEach(modal => {
+    const modalBtn = document.getElementById(modal.getAttribute('id') + "-btn");
+    const closeModalElements = modal.querySelectorAll(".close");
+
+    // Open the modal when the associated button is clicked
+    if (modalBtn) {
+      modalBtn.addEventListener('click', () => {
+        modal.style.display = "block";
+      });
+    }
+
+    // Close the modal when the close elements are clicked
+    closeModalElements.forEach(span => {
+      span.addEventListener('click', () => {
+        modal.style.display = "none";
+      });
+    });
+
+    // Close the modal if the user clicks outside of it
+    window.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  });
 });
 
 
-/*==================== QUALIFICATION TABS ====================*/
+/* ==================== Experience ==================== */
 const tabs = document.querySelectorAll('[data-target]');
 const tabContents = document.querySelectorAll('[data-content]');
 
@@ -172,16 +143,9 @@ function closeMenu(menus, arrows) {
     })
 };
 
+/* ==================== BLOG ====================*/
 
-// Scroll button
-function scrollTop() {
-    let scrollTop = document.getElementById('scroll-top');
-    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if (this.scrollY >= 200) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollTop)
-
-
+/* ==================== CONTACTS ====================*/
 function submitForm() {
 
     const frm = document.getElementsByName('contact-form')[0];
