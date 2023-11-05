@@ -59,9 +59,8 @@ section {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
-    padding: 15px 0;
     align-items: center;
-    padding: 1rem 8rem;
+    padding: 0.5rem 8rem;
 }
 
 .header::before {
@@ -88,6 +87,7 @@ section {
         rgba(0, 0, 0, 0.2), 
         transparent);
     transition: 1.5s;
+    z-index: -1;
 }
 
 .header:hover::after {
@@ -929,25 +929,17 @@ header span {
 /* Extra Large screens */
 @media (max-width: 1200px) {
     .header {
-        padding: 1rem 4rem;
+        padding: 0.5rem 4rem;
     }
-    /*
-    .navbar {
-        padding: 1rem 2rem;
-    }
-    */
     .navbar a {
         margin-left: 1.2rem;
     }
 }
 
-
-
-
 /* Large screens */
 @media (max-width: 992px) {
     .header {
-        padding: 1rem 2rem;
+        padding: 0.5rem 1.8rem;
     }
     .filterDiv {
         max-width: 200px;
@@ -1039,7 +1031,6 @@ header span {
         padding-bottom: 0px;
     }
 }
-
 
 /* Medium screens */
 @media (max-width: 768px) {
