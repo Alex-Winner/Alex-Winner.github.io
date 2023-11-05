@@ -22,6 +22,7 @@
 
 
     --big-font: 5rem;
+    --modal-title: 3rem;
     --h2-font: 3rem;
     --p-font: 1.1rem;
     --section-title-font: 4rem;
@@ -47,6 +48,10 @@ body {
 
 section {
     padding: 80px 0px 0;
+}
+
+.main-color-text {
+    color: var(--main-color);
 }
 
 
@@ -501,16 +506,20 @@ header span {
 
 
 .portfolio-main {
+    border: #618A2C solid 2px;
     margin-top: 20px;
+    padding-left: auto;
+    padding-right: auto;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /*justify-content: space-around;*/
 }
 
 .filterDiv {
     max-width: 300px;
     max-height: 300px;
+    width:200px;
     overflow: hidden;
     color: var(--text-color);
     text-align: center;
@@ -566,7 +575,6 @@ header span {
 }
 
 
-
 .modal {
     display: none;    
     position: fixed;
@@ -578,15 +586,25 @@ header span {
     width: 100%;
     height: 100%;
     overflow: auto;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: var(--text-color);
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-title {
     color: var(--second-color);
+    font-size: var(--modal-title);
+    font-weight: 300;
+    letter-spacing: 2px;
     margin-bottom: 10px;
     text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 /* Modal Content */
 .modal-content {
@@ -601,16 +619,44 @@ header span {
     box-sizing: border-box;
 }
 
-.modal-content p {
-    color: var(--text-color);
+.p-center {
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.p-justify-center {
+    text-align:justify;
+}
+
+#construction {
+    width: 150px;
+}
+
 
 .modal-content img {
     margin-top: 20px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.modal i {
+    font-size: 4rem;
+    color: var(--main-color);
+    margin: 5px;
+    border-radius: 50%;
+    padding: 5px;
+    transition: 0.4s;
+}
+
+.modal i:hover {
+    scale: 1.1;
+    color: var(--text-color);
+}
+
 
 .modal-head {
     display: flex;
@@ -656,6 +702,12 @@ header span {
 
 .show {
     display: block;
+}
+
+/* BLOG */
+
+.blog-content {
+    text-align: center;
 }
 
 
@@ -916,14 +968,8 @@ header span {
     bottom: 5rem;
 }
 
-/*
-.menuIcon {
-    display: none;
-}
-*/
 /* Extra Extra Large screens */
 @media (min-width: 1201px) {
-    /* Your CSS rules for extra extra large screens here */
 }
 
 /* Extra Large screens */
