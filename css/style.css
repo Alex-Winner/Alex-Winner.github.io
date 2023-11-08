@@ -47,7 +47,7 @@ body {
 }
 
 section {
-    padding: 80px 0px 0;
+    padding: 70px 0px 0px;
 }
 
 .main-color-text {
@@ -186,7 +186,9 @@ header span {
 
 /* ========= HOME =========*/
 
-
+.home {
+    height: 100vh;
+}
 
 .home .text a {
     text-align: center;
@@ -520,24 +522,21 @@ header span {
 
 
 .portfolio-main {
-    border: #618A2C solid 2px;
     margin-top: 20px;
     padding-left: auto;
     padding-right: auto;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    /*justify-content: space-around;*/
 }
 
 .filterDiv {
-    max-width: 300px;
-    max-height: 300px;
-    width:200px;
+    float:left;
+    width: 24%;
     overflow: hidden;
     color: var(--text-color);
     text-align: center;
-    margin: 5px;
+    margin: 0.5%;
     display: none;
     cursor: pointer;
     border-radius: 10px;
@@ -807,12 +806,10 @@ header span {
 
 /* ===================== CONTACT ===================== */
 .contact {
-    height: 90vh;
+    height: 100vh;
 }
 
 .contact-content {
-    /*border: #547924 dashed 2px;*/
-    padding-bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -982,9 +979,6 @@ header span {
     bottom: 5rem;
 }
 
-/* Extra Extra Large screens */
-@media (min-width: 1201px) {
-}
 
 /* Extra Large screens */
 @media (max-width: 1200px) {
@@ -1001,9 +995,13 @@ header span {
     .header {
         padding: 0.5rem 1.8rem;
     }
+
+    .modal-title {
+        font-size: 2.5rem;
+    }
+
     .filterDiv {
-        max-width: 200px;
-        max-height: 200px;
+        width: 32%;
     }
 
     .navbar a {
@@ -1029,7 +1027,7 @@ header span {
     }
 
     .container-home {
-        padding-bottom: 0;
+        padding-bottom: 1;
         padding-top: 0;
     }
 
@@ -1094,6 +1092,10 @@ header span {
 
 /* Medium screens */
 @media (max-width: 768px) {
+
+    .modal-title {
+        font-size: 2rem;
+    }
 
     .menuIcon {
         display: block;
@@ -1166,10 +1168,6 @@ header span {
         /*border: #ec4f1f solid 2px;*/
     }
 
-    .filterDiv {
-        max-width: 180px;
-        max-height: 180px;
-    }
 
     .container {
         width: 100%;
@@ -1222,15 +1220,19 @@ header span {
 /* Small screens */
 @media (max-width: 576px) {
 
+    .modal-title {
+        font-size: 1.8rem;
+    }
+
     #intro-text{
         font-size: 1.8rem;
     }
     .modal-content img {
         width: 100%;
     }
+    
     .filterDiv {
-        max-width: 140px;
-        max-height: 140px;
+        width: 49%;
     }
 
     .section__title {
@@ -1271,6 +1273,13 @@ header span {
 }
 
 @media (max-width: 350px) {
+    .skills__header h3 {
+        font-size: 1rem;
+    }
+    .header .logo {
+        font-size: 1.5rem;
+    }
+
     .home p {
         font-size: 0.9rem;
     }
@@ -1289,5 +1298,17 @@ header span {
 @media (min-width: 576px) {
     .after_timeline {
         display: none;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .container-left h2 {
+        margin-top: 25px;
+        font-size: 20px;
+
+    }
+
+    #intro-text {
+        font-size: 25px;
     }
 }
