@@ -20,10 +20,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Alyx Winner</title>
-
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/solar.css">
-
 
     <script src="https://kit.fontawesome.com/fa5a92aa23.js" crossorigin="anonymous"></script>
     <script>
@@ -109,7 +107,50 @@
             <h2 class="section__title">About</h2>
             <div class="container-upper">
                 <div class="container-left">
-                    <img src="img/about.jpg" alt="">
+
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 800 800" id="loader">
+                        <defs>
+                            <clipPath id="clipPath4">
+                                <circle class="blob" cx="350" cy="170" r="150"
+                                    transform="rotate(0) translate(0, 0) rotate(0)" />
+                                <circle class="blob" cx="400" cy="480" r="280"
+                                    transform="rotate(0) translate(0, 0) rotate(0)" />
+                                <circle class="blob" cx="600" cy="230" r="35"
+                                    transform="rotate(0) translate(0, 0) rotate(0)" />
+                                <circle class="blob" cx="150" cy="620" r="105"
+                                    transform="rotate(0) translate(0, 0) rotate(0)" />
+                                <circle class="blob" cx="650" cy="680" r="15"
+                                    transform="rotate(0) translate(0, 0) rotate(0)" />
+                            </clipPath>
+                            <filter id="goo">
+                                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                                <feColorMatrix in="blur" mode="matrix"
+                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                                <feBlend in2="goo" in="SourceGraphic" result="mix" />
+                            </filter>
+                            <pattern id="Pattern" x="0" y="0" width="0.25" height="0.25">
+                                <image xlink:href="img/noise.png"></image>
+                            </pattern>
+                        </defs>
+
+
+                        <!-- Apply the clipPath to this group -->
+                        <g class="blobs-filter">
+                            <g clip-path="url(#clipPath4)">
+                                <rect id="rect-background" width="800" height="900" />
+                                <rect fill="url(#Pattern)" width="800" height="900" />
+                                <image class="portrait2 blob" x="-2%" y="-38%" width=100% xlink:href="img/portrait.png"
+                                    transform="rotate(0) translate(0, 0) rotate(0)"></image>
+                                <image class="portrait" x="0%" y="-40%" width=100% xlink:href="img/portrait.png">
+                                </image>
+                            </g>
+                        </g>
+
+                        <image class="portrait" clip-path="url(#clipPath4)" x="0%" y="-40%" width=100%
+                            xlink:href="img/portrait.png"></image>
+                    </svg>
+
                 </div>
                 <div class="container-right">
                     <h2>My name is <span class="second-color">&ltAlex&gt <i class='bx bx-wink-smile'></i></span></h2>
@@ -869,13 +910,14 @@
     </a>
     <!-- import -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/navigation_script.js"></script>
 
     <!-- Animations -->
     <script type="text/javascript" src="js/solar_animation.js"></script>
     <script type="text/javascript" src="js/typing_animation.js"></script>
+    <script type="text/javascript" src="js/blob.js"></script>
 </body>
 
 </html>

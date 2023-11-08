@@ -127,7 +127,6 @@ section {
     font-size: var(--section-title-font);
     color: var(--title-color);
     letter-spacing: 10px;
-
 }
 
 .container {
@@ -313,10 +312,25 @@ header span {
 
 /* ==================== About ==================== */
 
-.about img {
-    width: 20rem;
-    border-radius: 50% 50% 30% 40%;
-    outline: 5px solid rgba(0, 0, 0, 0.5);
+.blobs-filter {
+    -webkit-filter: url("#goo");
+    filter: url("#goo");
+}
+
+#rect-background {
+    fill: var(--main-color);
+}
+
+
+.portrait {
+    filter: grayscale(100%);
+    mix-blend-mode:normal;
+}
+
+.portrait2{
+    filter: grayscale(100%);
+    mix-blend-mode:multiply;    
+    opacity: 0.3;
 }
 
 
@@ -637,7 +651,7 @@ header span {
 
 .modal-content img {
     margin-top: 20px;
-    width: 80%;
+    width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1086,6 +1100,9 @@ header span {
         z-index: 1000;
     }
 
+    .modal-content img {
+        width: 80%;
+    }
     .navbar {
         position: absolute;
         top: 100%;
@@ -1208,7 +1225,9 @@ header span {
     #intro-text{
         font-size: 1.8rem;
     }
-
+    .modal-content img {
+        width: 100%;
+    }
     .filterDiv {
         max-width: 140px;
         max-height: 140px;
